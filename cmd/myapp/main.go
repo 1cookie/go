@@ -31,9 +31,4 @@ func main() {
     zooWithCat := Zoo{animal: Cat{}}
     zooWithCat.MakeAnimalSpeak()
 
-
-
-
-
-
 }
