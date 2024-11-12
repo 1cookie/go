@@ -1,1 +1,1 @@
-# Go scaffold an app
+# Go
