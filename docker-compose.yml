@@ -1,0 +1,27 @@
+
+services:
+  go_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: go_app
+    ports:
+      - "8080:8080"  # Expose Go app on port 8080
+    networks:
+      - app-network
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/nginx.conf  # Mount the custom NGINX config
+    ports:
+      - "80:80"  # Expose NGINX on port 80
+    depends_on:
+      - go_app
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

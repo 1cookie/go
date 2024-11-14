@@ -1,3 +1,5 @@
+# Go - A simple API with docker & nginx as a reverse proxy
+
 ### Building the Application
 
 1. **Clone the repository**:
