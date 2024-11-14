@@ -17,4 +17,5 @@
 3. Run the application
    ```bash
      curl http://localhost/api
+     {"message":"Hello, World!"}
    ```
